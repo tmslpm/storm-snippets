@@ -1,0 +1,33 @@
+{
+    "success": true,
+    "articles": [
+        {
+            "title": "Awesome Snippets",
+            "category": "test",
+            "language": "txt",
+            "content": "# My first Storm Snippets\n\n Example description\n - list\n - list\n - list",
+            "snippets": [
+                "code 1",
+                "code 2"
+            ]
+        },
+        {
+            "title": "Snippet: Git Push",
+            "category": "test",
+            "language": "shell",
+            "content": "# example fast git push\n\n make git commit and git push\n - list\n - list\n - list",
+            "snippets": [
+                "git add . && git commit -m '...' && git push"
+            ]
+        },
+        {
+            "title": "Hello Javascript",
+            "category": "test",
+            "language": "javascript",
+            "content": "# Hello World \n\n print hello in the console\n - list\n - list\n - list",
+            "snippets": [
+                "console.log('hello')"
+            ]
+        }
+    ]
+}

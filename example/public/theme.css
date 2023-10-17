@@ -1,0 +1,504 @@
+
+:root {
+    --footer-height: 40px;
+    --header-height: 55px;
+    --side-navigation-width: 255px;
+    --scrollbar-size: 8px;
+
+    --border-radius: 5px;
+    --font-size-low: 16px;
+    --font-size: 20px;
+    --font-size-medium: 28px;
+    --font-size-large: 36px;
+    --font-familly: "Segoe UI", Arial, sans-serif;
+    --rgb-green: 76, 175, 80;
+    --color-green: rgb(var(--rgb-green));
+
+    --rgb-orange: 255, 178, 35;
+    --color-orange: rgb(var(--rgb-orange));
+
+    --rgb-yellow: 255, 227, 70;
+    --color-yellow: rgb(var(--rgb-yellow));
+
+    --rgb-red: 244, 67, 54;
+    --color-red: rgb(var(--rgb-red));
+
+    --rgb-blue: 0, 140, 186;
+    --color-blue: rgb(var(--rgb-blue));
+
+    --rgb-love: 247, 169, 32;
+    --color-love: rgb(var(--rgb-love));
+
+    /* 1) light theme (default) */
+    --light-theme-background: rgb(241, 241, 241);
+    --light-theme-background-soft: rgb(200, 200, 200);
+    --light-theme-background-mute: rgb(180, 180, 180);
+
+    --light-theme-border: rgba(60, 60, 60, .122);
+    --light-theme-border-hover: rgba(60, 60, 60, .29);
+
+    --light-theme-heading: rgb(44, 62, 80);
+    --light-theme-text: rgb(73, 84, 100);
+
+    --light-theme-transparent-09: rgb(255, 255, 255, .9);
+    --light-theme-transparent-08: rgb(255, 255, 255, .8);
+    --light-theme-transparent-07: rgb(255, 255, 255, .7);
+    --light-theme-transparent-06: rgb(255, 255, 255, .6);
+    --light-theme-transparent-05: rgb(255, 255, 255, .5);
+    --light-theme-transparent-04: rgb(255, 255, 255, .4);
+    --light-theme-transparent-03: rgb(255, 255, 255, .3);
+    --light-theme-transparent-02: rgb(255, 255, 255, .2);
+    --light-theme-transparent-01: rgb(255, 255, 255, .1);
+
+    /* 2) dark theme */
+    --dark-theme-background: rgb(32, 32, 32);
+    --dark-theme-background-soft: rgb(44, 44, 44);
+    --dark-theme-background-mute: rgb(56, 56, 56);
+
+    --dark-theme-border: rgba(100, 100, 100, .38);
+    --dark-theme-border-hover: rgba(100, 100, 100, .851);
+
+    --dark-theme-heading: rgb(255, 255, 255);
+    --dark-theme-text: rgba(235, 235, 235, .639);
+
+    --dark-theme-transparent-09: rgb(32, 32, 32, .9);
+    --dark-theme-transparent-08: rgb(32, 32, 32, .8);
+    --dark-theme-transparent-07: rgb(32, 32, 32, .7);
+    --dark-theme-transparent-06: rgb(32, 32, 32, .6);
+    --dark-theme-transparent-05: rgb(32, 32, 32, .5);
+    --dark-theme-transparent-04: rgb(32, 32, 32, .4);
+    --dark-theme-transparent-03: rgb(32, 32, 32, .3);
+    --dark-theme-transparent-02: rgb(32, 32, 32, .2);
+    --dark-theme-transparent-01: rgb(32, 32, 32, .1);
+
+    /* current theme */
+    --color-background: var(--light-theme-background);
+    --color-background-soft: var(--light-theme-background-soft);
+    --color-background-mute: var(--light-theme-background-mute);
+
+    --color-border: var(--light-theme-border);
+    --color-border-hover: var(--light-theme-border-hover);
+
+    --color-heading: var(--light-theme-heading);
+    --color-text: var(--light-theme-text);
+
+    --color-transparent-09: var(--light-theme-transparent-09);
+    --color-transparent-08: var(--light-theme-transparent-08);
+    --color-transparent-07: var(--light-theme-transparent-07);
+    --color-transparent-06: var(--light-theme-transparent-06);
+    --color-transparent-05: var(--light-theme-transparent-05);
+    --color-transparent-04: var(--light-theme-transparent-04);
+    --color-transparent-03: var(--light-theme-transparent-03);
+    --color-transparent-02: var(--light-theme-transparent-02);
+    --color-transparent-01: var(--light-theme-transparent-01);
+}
+
+[data-theme="dark"] {
+    --color-background: var(--dark-theme-background);
+    --color-background-soft: var(--dark-theme-background-soft);
+    --color-background-mute: var(--dark-theme-background-mute);
+
+    --color-border: var(--dark-theme-border);
+    --color-border-hover: var(--dark-theme-border-hover);
+
+    --color-heading: var(--dark-theme-heading);
+    --color-text: var(--dark-theme-text);
+
+    --color-transparent-09: var(--dark-theme-transparent-09);
+    --color-transparent-08: var(--dark-theme-transparent-08);
+    --color-transparent-07: var(--dark-theme-transparent-07);
+    --color-transparent-06: var(--dark-theme-transparent-06);
+    --color-transparent-05: var(--dark-theme-transparent-05);
+    --color-transparent-04: var(--dark-theme-transparent-04);
+    --color-transparent-03: var(--dark-theme-transparent-03);
+    --color-transparent-02: var(--dark-theme-transparent-02);
+    --color-transparent-01: var(--dark-theme-transparent-01);
+}
+
+::-webkit-scrollbar {
+    width: var(--scrollbar-size);
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-background-mute);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-love);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: var(--color-text);
+    font-family: var(--font-familly);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scrollbar-color: red !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    background: #ff00002e !important;
+    border-color: red !important
+}
+
+.warning {
+    background: #ffa5002e !important;
+    border-color: orange !important
+}
+
+.safe {
+    background: #9acd322e !important;
+    border-color: yellowgreen !important
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.scrollable-element {
+    scrollbar-color: dark;
+}
+
+/**
+ *  --------------------------
+ *  | Structure Layout Theme |
+ *  --------------------------
+ *
+ *  (0) = .headerStyle, .wrapperTopNavigation
+ *  (1) = .sideNavStyle, .wrapperSideNavigation
+ *  (2) = .articleStyle, .wrapperMainContent
+ *  (3) = .footerStyle
+ *  (4) = .mainStyle
+ *  
+ *  x----------------------------------------x
+ *  |                   (0)                  |
+ *  x-----------x----------------------------x  }---x
+ *  |           |                            |      |
+ *  |           |                            |      |
+ *  |           |                            |      |
+ *  |           |            (2)             |      |
+ *  |    (1)    |                            |      |--> (4)
+ *  |           |                            |      |
+ *  |           |                            |      |
+ *  |           x----------------------------x      |
+ *  |           |            (3)             |      |
+ *  x-----------x----------------------------x  }---x
+ *
+ */
+
+/**********************************************/
+/*** H E A D E R  *****************************/
+
+.headerStyle {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: var(--header-height);
+    background-color: #333;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+}
+
+/**********************************************/
+/*** T O P -  N A V I G A T I O N *************/
+
+.wrapperTopNavigation {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.wrapperTopNavigationLeft,
+.wrapperTopNavigationRight {
+    height: 100%;
+}
+
+.wrapperTopNavigationRight {
+    padding: 0 10px;
+}
+
+.wrapperTopNavigationLeft a {
+    padding: 14px;
+}
+
+.wrapperTopNavigationRight a {
+    padding: 7px;
+}
+
+/* link */
+
+.wrapperTopNavigation a {
+    height: 100%;
+    float: left;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    color: #f2f2f2;
+    text-decoration: none;
+    font-size: 17px;
+    transition: color 0.25s, background-color 0.25s;
+}
+
+.wrapperTopNavigation a:hover:not(:first-child) {
+    background-color: #ddd;
+    color: black;
+}
+
+.wrapperTopNavigation a.active {
+    background-color: rgb(var(--rgb-love));
+    color: white;
+}
+
+/* link expand menu */
+
+.wrapperTopNavigation .expandTopMenu {
+    margin-left: auto;
+    display: none;
+}
+
+.wrapperTopNavigation .expandTopMenu:hover,
+.wrapperTopNavigation .icon:hover {
+    background-color: initial !important;
+    color: var(--color-love) !important;
+}
+
+/* responsive logic */
+@media screen and (max-width: 600px) {
+
+    /* hide all link */
+    .wrapperTopNavigation a:not(:first-child) {
+        display: none;
+    }
+
+    /* display burgur icon */
+    .wrapperTopNavigation a.expandTopMenu {
+        display: flex;
+    }
+
+    /* display all link if header has class .responsive */
+    .headerStyle.responsive {
+        height: fit-content;
+        background-color: var(--dark-theme-background);
+    }
+
+    .headerStyle.responsive .wrapperTopNavigation {
+        align-items: end;
+    }
+
+    .headerStyle.responsive .wrapperTopNavigation a {
+        float: none;
+        display: flex;
+        text-align: left;
+        height: var(--header-height);
+    }
+
+    .headerStyle.responsive .wrapperTopNavigationLeft {
+        width: 100%;
+        background-color: #333;
+    }
+
+    .headerStyle.responsive .wrapperTopNavigationRight {
+        padding: 5px 10px;
+    }
+
+}
+
+/************************************************/
+/*** S I D E -  N A V I G A T I O N *************/
+
+.sideNavStyle {
+    background-color: var(--color-background);
+    z-index: 1;
+    box-shadow: 5px 0px 10px 0px rgba(0, 0, 0, 0.15);
+}
+
+.sideNavigationSection {
+    display: block;
+}
+
+.sideNavigationSection {
+    display: block;
+    word-break: break-all;
+}
+
+.sideNavigationSection a,
+.sideNavigationSection h1 {
+    text-decoration: none;
+    display: block;
+}
+
+.sideNavigationSection h2 {
+    padding: 2px 1px 1px 10px;
+    margin-top: 15px;
+    font-size: x-large;
+}
+
+.sideNavigationSection h2::before {
+    content: '/';
+    color: var(--color-love);
+    font-size: xx-large;
+}
+
+.sideNavigationSection a {
+    cursor: pointer;
+    padding: 6px 0 6px 16px;
+    transition: color 0.25s, background-color 0.25s;
+}
+
+.sideNavigationSection a:hover {
+    background-color: rgb(var(--rgb-love), 0.08);
+    color: var(--color-love);
+}
+
+/***************************************/
+/*** LEFT SIDE MENU + MAIN CONTENT *****/
+
+.mainStyle {
+    display: flex;
+    z-index: 0;
+    height: calc(100vh - var(--header-height));
+}
+
+.wrapperSideNavigation,
+.wrapperMainContent {
+    height: 100%;
+    margin-top: var(--header-height);
+    overflow-y: scroll;
+    /* don't remove backdrop-filter or scrollbar 
+       hover inside element not working because 
+       element has not background color ... 
+       idk why ???
+    */
+    backdrop-filter: blur(1px);
+}
+
+.wrapperSideNavigation {
+    min-width: var(--side-navigation-width);
+}
+
+.wrapperMainContent {
+    width: 100%;
+    background-image: linear-gradient(to left bottom, var(--color-background-soft), var(--color-background));
+}
+
+/**************************************/
+/** A R T I C L E *********************/
+
+.articleStyle {
+    padding: 10px 25px; 
+}
+
+.articleStyle h1::after,
+.articleStyle h2::after,
+.articleStyle h3::after,
+.articleStyle h4::after,
+.articleStyle h5::after,
+.articleStyle h6::after {
+    content: ' \01f517';
+    opacity: 0;
+    transition: opacity ease-in-out 0.2s;
+}
+
+.articleStyle h1:hover::after,
+.articleStyle h2:hover::after,
+.articleStyle h3:hover::after,
+.articleStyle h4:hover::after,
+.articleStyle h5:hover::after,
+.articleStyle h6:hover::after {
+    opacity: 1;
+}
+
+.articleStyle a {
+    color: var(--color-love);
+}
+
+.articleStyle .backToTopStyle {
+    padding: 0 40px
+}
+
+.articleStyle .backToTopStyle,
+.articleStyle .backToTopStyle a {
+    text-align: right;
+    color: var(--color-love);
+}
+
+.articleStyle .backToTopStyle svg:hover {
+    transform: scale(1.25);
+    transition: cubic-bezier(0.39, 0.575, 0.565, 1) 0.2s;
+}
+
+.articleStyle .backToTopStyle svg {
+    color: rgba(var(--rgb-love), 0.65);
+}
+
+/**************************************/
+/** F O O T E R ***********************/
+
+.footerStyle {
+    height: var(--footer-height);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.02);
+    -webkit-app-region: drag;
+    user-select: none;
+}
+
+
+/**************************************/
+/* input with icon (like search bar) **/
+
+.wrapperInput {
+    padding: 20px 9px 0 9px;
+}
+
+.wrapperInput .childWrapperInput {
+    border: 1px solid var(--color-text);
+    box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    padding: 5px 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    transition: color .5s, border-color .5s;
+}
+
+.wrapperInput .childWrapperInput input {
+    width: calc(100% - 24px);
+    color: var(--color-text);
+    font-size: medium;
+    background-color: var(--color-background);
+    padding: 5px 0;
+    border: none;
+    outline: none;
+}
+
+.wrapperInput .childWrapperInput:has(input:focus) {
+    border-color: var(--color-love) !important;
+    color: var(--color-love);
+}

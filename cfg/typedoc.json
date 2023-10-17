@@ -1,0 +1,41 @@
+{
+    "$schema": "https://typedoc.org/schema.json",
+    "out": "../dist/doc",
+    "entryPoints": [
+        "../src"
+    ],
+    "exclude": [],
+    "name": "Storm Snippets Doc 🌀",
+    "navigationLinks": {
+        "🚀 Back to Github": "https://github.com/tmslpm/storm-snippets"
+    },
+    "entryPointStrategy": "expand",
+    "visibilityFilters": {
+        "protected": true,
+        "private": true,
+        "inherited": true,
+        "external": true,
+        "@alpha": true,
+        "@beta": true,
+        "@ignore": false
+    },
+    "excludePrivate": true,
+    "includeVersion": true,
+    "customCss": "typedoc.css",
+    "groupOrder": [
+        "References",
+        "Modules",
+        "Namespaces",
+        "Enumerations",
+        "Enumeration Members",
+        "Classes",
+        "Interfaces",
+        "Type Aliases",
+        "Constructors",
+        "Properties",
+        "Variables",
+        "Functions",
+        "Methods",
+        "Accessors"
+    ]
+}

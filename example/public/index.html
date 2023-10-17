@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="{{ STORM.LANGUAGE }}">
+
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>{{ STORM.TITLE }}</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+    </head>
+
+    <body>
+
+        <header id="menuTopNavigation" class="headerStyle">
+            <nav class="wrapperTopNavigation">
+                <div class="wrapperTopNavigationLeft">
+                    {{ STORM.TOP_MENU }}
+                </div>
+                <div class="wrapperTopNavigationRight">
+                    <a id="switchThemeMode" href="javascript:void(0);" class="icon">
+                        <svg fill="currentColor" viewBox="0 -960 960 960" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <use href="#icon-dark-mode"></use>
+                        </svg>
+                    </a>
+                    <a id="expandTopMenu" href="javascript:void(0);" class="expandTopMenu">
+                        <svg fill="currentColor" viewBox="0 -960 960 960" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <use href="#icon-burger"></use>
+                        </svg>
+                    </a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="mainStyle">
+            <nav id="menuSideNavigation" class="sideNavStyle wrapperSideNavigation">
+                <div class="wrapperInput">
+                    <div class="childWrapperInput">
+                        <input id="searchAnyInfo" type="text" name="search_any" placeholder="search..">
+                        <svg fill="currentColor" viewBox="0 -960 960 960" height="24" width="24" xmlns="http://www.w3.org/2000/svg">
+                            <use href="#icon-search"></use>
+                        </svg>
+                    </div>
+                </div>
+                {{ STORM.SIDE_MENU }}
+            </nav>
+            <div class="wrapperMainContent">
+                <article id="article" class="articleStyle">
+                    {{ STORM.ARTICLE }}
+                    <div id="btnBackToTop" class="backToTopStyle">
+                        <a href="#article">
+                            <svg fill="currentColor" viewBox="0 -960 960 960" height="64" width="64" xmlns="http://www.w3.org/2000/svg">
+                                <use href="#icon-arrow-top"></use>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+                <footer class="footerStyle">{{ STORM.FOOTER }}</footer>
+            </div>
+        </main>
+
+        <svg style="display: none;" height="48" viewBox="0 -960 960 960" width="48" xmlns="http://www.w3.org/2000/svg">
+            <g id="icon-light-mode">
+                <path
+                    d="M480-280q-83 0-141.5-58.5T280-480q0-83 58.5-141.5T480-680q83 0 141.5 58.5T680-480q0 83-58.5 141.5T480-280ZM80-440q-17 0-28.5-11.5T40-480q0-17 11.5-28.5T80-520h80q17 0 28.5 11.5T200-480q0 17-11.5 28.5T160-440H80Zm720 0q-17 0-28.5-11.5T760-480q0-17 11.5-28.5T800-520h80q17 0 28.5 11.5T920-480q0 17-11.5 28.5T880-440h-80ZM480-760q-17 0-28.5-11.5T440-800v-80q0-17 11.5-28.5T480-920q17 0 28.5 11.5T520-880v80q0 17-11.5 28.5T480-760Zm0 720q-17 0-28.5-11.5T440-80v-80q0-17 11.5-28.5T480-200q17 0 28.5 11.5T520-160v80q0 17-11.5 28.5T480-40ZM226-678l-43-42q-12-11-11.5-28t11.5-29q12-12 29-12t28 12l42 43q11 12 11 28t-11 28q-11 12-27.5 11.5T226-678Zm494 495-42-43q-11-12-11-28.5t11-27.5q11-12 27.5-11.5T734-282l43 42q12 11 11.5 28T777-183q-12 12-29 12t-28-12Zm-42-495q-12-11-11.5-27.5T678-734l42-43q11-12 28-11.5t29 11.5q12 12 12 29t-12 28l-43 42q-12 11-28 11t-28-11ZM183-183q-12-12-12-29t12-28l43-42q12-11 28.5-11t27.5 11q12 11 11.5 27.5T282-226l-42 43q-11 12-28 11.5T183-183Z" />
+            </g>
+            <g id="icon-dark-mode">
+                <path
+                    d="M581-116q-75.837 0-142.521-28.901-66.684-28.901-115.581-78Q274-272 245.5-338 217-404 217-480.018 217-555 245.5-621.5t77.398-115.599q48.897-49.099 115.581-78Q505.163-844 581-844q33.038 0 63.519 6T704-820q-74 60-118 148.5T542-480q0 103 44 191.5T704-140q-29 12-59.481 18T581-116Z" />
+            </g>
+            <g id="icon-arrow-top">
+                <path d="M440-160v-487L216-423l-56-57 320-320 320 320-56 57-224-224v487h-80Z" />
+            </g>
+            <g id="icon-search">
+                <path
+                    d="M784-120 532-372q-30 24-69 38t-83 14q-109 0-184.5-75.5T120-580q0-109 75.5-184.5T380-840q109 0 184.5 75.5T640-580q0 44-14 83t-38 69l252 252-56 56ZM380-400q75 0 127.5-52.5T560-580q0-75-52.5-127.5T380-760q-75 0-127.5 52.5T200-580q0 75 52.5 127.5T380-400Z" />
+            </g>
+            <g id="icon-burger">
+                <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z" />
+            </g>
+        </svg>
+
+            <script> console.warn("Storm Snippets 🌀 - {{ STORM.VERSION }}") </script>
+    </body>
+
+</html>

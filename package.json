@@ -1,0 +1,38 @@
+{
+  "name": "storm-snippets",
+  "version": "3.0.0",
+  "description": "Storm Snippets Plugin For webpack | Generate static HTML Website with custom external data provider",
+  "main": "index.js",
+  "scripts": {
+    "==[_build_plugin_webpack_]============================================================================": "echo 0",
+    "build": "tsc --project ./cfg/src.tsconfig.json",
+    "watch": "tsc --project ./cfg/src.tsconfig.json --watch",
+    "schem": "typescript-json-schema \"./cfg/src.tsconfig.json\" * --include \"./src/types/OptionStormGenHTML.ts\" --out \"./src/types/OptionStormGenHTML.schem.json\"",
+    "==[_test_doc_plugin_webpack_]=========================================================================": "echo 0",
+    "test": "jest --config ./cfg/jest.config.js",
+    "jinit": "jest --init",
+    "==[_build_doc_plugin_webpack_]========================================================================": "echo 0",
+    "docs": "typedoc --tsconfig ./cfg/typedoc.tsconfig.json --options ./cfg/typedoc.json --readme ./cfg/typedoc.readme.md",
+    "==[_utils_]===========================================================================================": "echo 0",
+    "bump": "npm version major --major"
+  },
+  "author": "tmslpm",
+  "license": "MIT",
+  "devDependencies": {
+    "@microsoft/tsdoc": "^0.14.2",
+    "@types/jest": "^29.5.5",
+    "@types/markdown-it": "^13.0.2",
+    "@types/webpack": "^5.28.3",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.1",
+    "typedoc": "^0.25.2",
+    "typescript": "^5.2.2",
+    "typescript-json-schema": "^0.62.0",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "html-minifier-terser": "^7.2.0",
+    "markdown-it": "^13.0.2"
+  }
+}

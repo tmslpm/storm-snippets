@@ -1,0 +1,72 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "DocumentProvider": {
+            "enum": [
+                "default",
+                "github_gist"
+            ],
+            "type": "string"
+        },
+        "OptionStormGenHTML": {
+            "properties": {
+                "dev_mode": {
+                    "type": "boolean"
+                },
+                "document_contenr_use_markdown": {
+                    "type": "boolean"
+                },
+                "document_contenr_use_minifier": {
+                    "type": "boolean"
+                },
+                "document_content_provider": {
+                    "$ref": "#/definitions/DocumentProvider"
+                },
+                "footer": {
+                    "type": "string"
+                },
+                "lang": {
+                    "type": "string"
+                },
+                "links": {
+                    "items": {
+                        "properties": {
+                            "target": {
+                                "enum": [
+                                    "_blank",
+                                    "_parent",
+                                    "_self",
+                                    "_top"
+                                ],
+                                "type": "string"
+                            },
+                            "text": {
+                                "type": "string"
+                            },
+                            "title": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "type": "array"
+                },
+                "minifier": {
+                    "properties": {},
+                    "type": "object"
+                },
+                "template_file_name": {
+                    "type": "string"
+                },
+                "title": {
+                    "type": "string"
+                }
+            },
+            "type": "object"
+        }
+    }
+}
+
